@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="price" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="orderItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OrderItem" inverseName="item" inverseEntity="OrderItem"/>
+    </entity>
+    <entity name="Order" representedClassName="Order" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0"/>
+        <attribute name="date" optional="YES" attributeType="Date"/>
+        <attribute name="id" optional="YES" attributeType="UUID"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="paid" attributeType="Boolean" defaultValueString="NO"/>
+        <attribute name="shipped" attributeType="Boolean" defaultValueString="NO"/>
+        <relationship name="orderItems" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="OrderItem" inverseName="order" inverseEntity="OrderItem"/>
+    </entity>
+    <entity name="OrderItem" representedClassName="OrderItem" syncable="YES" codeGenerationType="class">
+        <attribute name="quantity" attributeType="Integer 16" defaultValueString="0"/>
+        <attribute name="size" attributeType="String" defaultValueString=""/>
+        <relationship name="item" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="orderItem" inverseEntity="Item"/>
+        <relationship name="order" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Order" inverseName="orderItems" inverseEntity="Order"/>
+    </entity>
+    <elements>
+        <element name="Order" positionX="-189.25390625" positionY="-19.37109375" width="128" height="133"/>
+        <element name="OrderItem" positionX="131.00390625" positionY="-14.4609375" width="128" height="103"/>
+        <element name="Item" positionX="-9" positionY="54" width="128" height="103"/>
+    </elements>
 </model>
