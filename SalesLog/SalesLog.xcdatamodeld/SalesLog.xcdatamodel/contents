@@ -4,7 +4,7 @@
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="name" attributeType="String" defaultValueString=""/>
         <attribute name="price" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="orderItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OrderItem" inverseName="item" inverseEntity="OrderItem"/>
+        <relationship name="orderItem" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="OrderItem" inverseName="item" inverseEntity="OrderItem"/>
     </entity>
     <entity name="Order" representedClassName="Order" syncable="YES" codeGenerationType="class">
         <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0"/>

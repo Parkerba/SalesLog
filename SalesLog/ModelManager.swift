@@ -17,6 +17,7 @@ final class ModelManager {
     
     func setContext(_ context: NSManagedObjectContext) {
         self.context = context
+        context.undoManager = UndoManager()
     }
     
     func createAndAddItem(name: String, price: Float) {
@@ -123,6 +124,7 @@ final class ModelManager {
                 try self.context?.save()
                 print("Order item successfully deleted")
             } catch let error {
+                self.context?.undo()
                 print(error.localizedDescription)
             }
         }
@@ -135,6 +137,7 @@ final class ModelManager {
                 try self.context?.save()
                 print("Order successfully deleted")
             } catch let error {
+                self.context?.undo()
                 print(error.localizedDescription)
             }
         }
