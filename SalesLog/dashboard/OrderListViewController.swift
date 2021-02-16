@@ -27,7 +27,6 @@ class OrderListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        setUpNavBar()
         view.addSubview(orderTable)
         NSLayoutConstraint.activate([
             orderTable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -40,6 +39,8 @@ class OrderListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         asyncReload()
+        setUpNavBar()
+        
     }
     
     func asyncReload() {
@@ -56,6 +57,7 @@ class OrderListViewController: UIViewController {
         navigationItem.title = "Orders"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addOrderButtonTapped))
+        navigationController?.navigationBar.sizeToFit()
     }
     
     @objc

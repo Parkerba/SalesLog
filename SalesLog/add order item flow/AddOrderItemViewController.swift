@@ -57,8 +57,9 @@ class AddOrderItemViewController: UIViewController {
     
     func setUpNavBar() {
         navigationItem.title = "Add Order Item"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .done, target: self, action: #selector(donePressed))
+        navigationController?.navigationBar.sizeToFit()
     }
     
     @objc

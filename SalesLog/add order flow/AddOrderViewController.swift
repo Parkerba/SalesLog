@@ -104,6 +104,11 @@ class AddOrderViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setUpNavBar()
+    }
+    
     func setUpSubviews() {
         view.addSubview(inputStack)
         view.addSubview(pickerView)
@@ -128,9 +133,10 @@ class AddOrderViewController: UIViewController {
     }
     
     func setUpNavBar() {
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .done, target: self, action: #selector(donePressed))
         navigationItem.title = "New Order"
+        navigationController?.navigationBar.sizeToFit()
     }
     
     @objc

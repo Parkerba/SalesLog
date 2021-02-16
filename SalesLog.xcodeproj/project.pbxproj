@@ -78,15 +78,11 @@
 			children = (
 				A6550797253FE0D90036FF42 /* AppDelegate.swift */,
 				A6550799253FE0D90036FF42 /* SceneDelegate.swift */,
-				A655079B253FE0D90036FF42 /* DashBoardTabBarController.swift */,
-				A65DD5CB2540C0140002B1F2 /* ModelManager.swift */,
+				A6CF362B25DB710B001DCF0A /* persistance */,
 				A65DD5BC2540037E0002B1F2 /* GC.swift */,
-				A65DD5AA253FF50E0002B1F2 /* OrderListViewController.swift */,
-				A65DD5BF2540A41C0002B1F2 /* OrderItemsListViewController.swift */,
-				A65DD5C22540A5570002B1F2 /* OrderItemCell.swift */,
-				A65DD5AD253FF5DE0002B1F2 /* OrderCell.swift */,
-				A65DD5C82540B5D10002B1F2 /* AddOrderItemViewController.swift */,
-				A65DD5CE2540CE080002B1F2 /* AddOrderViewController.swift */,
+				A6CF362C25DB7131001DCF0A /* dashboard */,
+				A6CF362925DB70C5001DCF0A /* add order item flow */,
+				A6CF362825DB7098001DCF0A /* add order flow */,
 				A65DD5D42540E0240002B1F2 /* OrderItemView.swift */,
 				A65DD5D12540D0EF0002B1F2 /* SwitchLabelView.swift */,
 				A65507A3253FE0DD0036FF42 /* Assets.xcassets */,
@@ -95,6 +91,42 @@
 				A65507A0253FE0D90036FF42 /* SalesLog.xcdatamodeld */,
 			);
 			path = SalesLog;
+			sourceTree = "<group>";
+		};
+		A6CF362825DB7098001DCF0A /* add order flow */ = {
+			isa = PBXGroup;
+			children = (
+				A65DD5CE2540CE080002B1F2 /* AddOrderViewController.swift */,
+			);
+			path = "add order flow";
+			sourceTree = "<group>";
+		};
+		A6CF362925DB70C5001DCF0A /* add order item flow */ = {
+			isa = PBXGroup;
+			children = (
+				A65DD5C82540B5D10002B1F2 /* AddOrderItemViewController.swift */,
+			);
+			path = "add order item flow";
+			sourceTree = "<group>";
+		};
+		A6CF362B25DB710B001DCF0A /* persistance */ = {
+			isa = PBXGroup;
+			children = (
+				A65DD5CB2540C0140002B1F2 /* ModelManager.swift */,
+			);
+			path = persistance;
+			sourceTree = "<group>";
+		};
+		A6CF362C25DB7131001DCF0A /* dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A65DD5C22540A5570002B1F2 /* OrderItemCell.swift */,
+				A65DD5AD253FF5DE0002B1F2 /* OrderCell.swift */,
+				A65DD5BF2540A41C0002B1F2 /* OrderItemsListViewController.swift */,
+				A65DD5AA253FF50E0002B1F2 /* OrderListViewController.swift */,
+				A655079B253FE0D90036FF42 /* DashBoardTabBarController.swift */,
+			);
+			path = dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AJA26S6A7L;
 				INFOPLIST_FILE = SalesLog/Info.plist;
@@ -327,6 +360,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ParkerAmundsen.SalesLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AJA26S6A7L;
 				INFOPLIST_FILE = SalesLog/Info.plist;
@@ -346,6 +381,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ParkerAmundsen.SalesLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
