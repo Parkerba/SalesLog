@@ -117,7 +117,7 @@ class AddOrderViewController: UIViewController {
         NSLayoutConstraint.activate([
             inputStack.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             inputStack.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            inputStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            inputStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: GC.standardPadding),
             inputStack.bottomAnchor.constraint(lessThanOrEqualTo: pickerView.topAnchor),
             nameTextField.widthAnchor.constraint(equalTo: inputStack.widthAnchor, constant: -GC.standardPadding*2),
             shippedToggle.widthAnchor.constraint(equalTo: inputStack.widthAnchor),
